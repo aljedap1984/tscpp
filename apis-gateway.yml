@@ -11,12 +11,8 @@ server:
 # requests using zuul
 zuul:
   routes:
-    config-general:
-      path: /config-general/**
-      serviceId: config-general
-    control-flight:
-      path: /control-flight/**
-      serviceId: control-flight
+    config-general: /api/**
+    control-flight: /api/**
 	
 # Define the Eureka server that handles service registration
 eureka:
