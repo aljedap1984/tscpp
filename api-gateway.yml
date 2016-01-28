@@ -11,7 +11,7 @@ server:
 zuul:
   routes:
     config-general: /api/**
-    control-flight: /api/**
+    flight-control: /api/**
 # Define the Eureka server that handles service registration
 eureka:
   client:
