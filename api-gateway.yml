@@ -46,6 +46,7 @@ zuul:
     config-general: /configg/**
     flight-control: /flightc/**
     complete-air: /complui/**
+    fare-control: /farec/**
   addProxyHeaders: true
 
 # Define the Eureka server that handles service registration
