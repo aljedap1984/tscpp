@@ -43,8 +43,8 @@ server:
 # requests using zuul
 zuul:
   routes:
-    config-general: /api/**
-    flight-control: /api/**
+    config-general: /app/**
+    flight-control: /app/**
     complete-air: /complui/**
     fare-control: /farec/**
   addProxyHeaders: true
