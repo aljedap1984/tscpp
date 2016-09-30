@@ -6,30 +6,10 @@
 
 # Remaining properties are used by the OAuth2 SSO to determine where the authorization server is and
 # what client crendentials to use to access that server.
-#spring:
-  #profiles: test
-  #jmx:
-    #enabled: false
-# Datasource and JPA configuration to be used for using the same tokenstore as the authorization server for
-# the defined resource server. Note that there can't be 2 different root nodes, so datasource falls under the "spring" node.
-  #datasource:
-    #url: jdbc:mysql://192.168.101.204:3306/authapi
-    #username: root
-    #password: mysql
-    #driver-class: com.mysql.jdbc.Driver
-
-  #jpa:
-    #database-platform: org.hibernate.dialect.MySQLDialect
-    #show-sql: false
-    #hibernate:
-      #ddl-auto: create
-
-
 logging:
   level:
-     org:
-       springframework:
-         security: DEBUG
+    org.springframework.security: DEBUG
+
 # Define the port where the API gateway server would be running
 server:
   port: 8765
@@ -42,13 +22,28 @@ server:
 # Spring cloud security would need to secure the api gateway before it can route the
 # requests using zuul
 zuul:
+  #ignored-services: '*'
+  #ignoredPatterns: /**/api/**
   routes:
-    config-general: /configg/**
-    flight-control: /flightc/**
-    complete-air: /complui/**
-    fare-control: /farec/**
+    configgeneral:
+      path: /configg/**
+      #serviceId: configgeneral
+      url: http://localhost:8083
+    flightcontrol:
+      path: /flightc/**
+      #serviceId: flightcontrol
+      url: http://localhost:8082
+    #complete-air: /complui/**
+    farecontrol:
+      path: /farecontrol/**
+      #serviceId: farecontrol
+      url: http://localhost:8084
+    user-service:
+      sensitiveHeaders:
+      path: /users/**
+      #stripPrefix: false
+      url: http://localhost:9999/
   addProxyHeaders: true
-
 # Define the Eureka server that handles service registration
 eureka:
   client:
