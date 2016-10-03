@@ -32,12 +32,12 @@ zuul:
     flightcontrol:
       path: /flightc/**
       #serviceId: flightcontrol
-      url: http://localhost:8082
+      url: http://localhost:8081
     #complete-air: /complui/**
     farecontrol:
-      path: /farecontrol/**
+      path: /farec/**
       #serviceId: farecontrol
-      url: http://localhost:8084
+      url: http://localhost:8085
     user-service:
       sensitiveHeaders:
       path: /users/**
