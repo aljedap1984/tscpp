@@ -43,9 +43,9 @@ server:
   contextPath: /uaa
 # config security
 security:
-  sessions: NEVER
-  #user: 
-    #password: password
+  #sessions: NEVER
+  user: 
+    password: password
 #security:
   #enable-csrf: false
   #user:
