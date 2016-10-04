@@ -42,9 +42,10 @@ server:
   port: 9999
   contextPath: /uaa
 # config security
-security: 
-  user: 
-    password: password
+security:
+  sessions: NEVER
+  #user: 
+    #password: password
 #security:
   #enable-csrf: false
   #user:
