@@ -2,8 +2,8 @@
 mail:
   domain: gmail.com
 # info logging
-info:
-  id: ${spring.application.name}
-logging:
-  level:
-    org.springframework.security: DEBUG
+#info:
+  #id: ${spring.application.name}
+#logging:
+  #level:
+    #org.springframework.security: DEBUG
