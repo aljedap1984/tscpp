@@ -44,6 +44,9 @@ zuul:
       #stripPrefix: false
       url: http://localhost:9999/
   addProxyHeaders: true
+#
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+hystrix.command.default.execution.isolation.semaphore.maxConcurrentRequests: 20
 # Define the Eureka server that handles service registration
 eureka:
   client:
