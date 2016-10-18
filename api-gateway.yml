@@ -25,16 +25,16 @@ zuul:
   #ignored-services: '*'
   #ignoredPatterns: /**/api/**
   routes:
-    configgeneral:
+    config-general:
       path: /configg/**
       #serviceId: configgeneral
       url: http://localhost:8083
-    flightcontrol:
+    flight-control:
       path: /flightc/**
       #serviceId: flightcontrol
       url: http://localhost:8081
     #complete-air: /complui/**
-    farecontrol:
+    fare-control:
       path: /farec/**
       #serviceId: farecontrol
       url: http://localhost:8085
