@@ -41,6 +41,18 @@ zuul:
       path: /farec/**
       #serviceId: farecontrol
       url: http://localhost:8085
+    mrn:
+      path: /mrn/**
+      #serviceId: farecontrol
+      url: http://localhost:8086
+    pnr:
+      path: /pnr/**
+      #serviceId: farecontrol
+      url: http://localhost:8087
+    sales:
+      path: /sale/**
+      #serviceId: farecontrol
+      url: http://localhost:8088
     user-service:
       sensitiveHeaders:
       path: /users/**
