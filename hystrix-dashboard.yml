@@ -9,13 +9,14 @@ server:
   #ignored: true
 turbine:
   aggregator:
-    clusterNameExpression: 'default'
+    clusterNameExpression: 'CUSTOMERS'
   appConfig: fare-control,flight-control,sales,pnr
+  clusterNameExpression: metadata['cluster']
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-  #instance:
-    #metadataMap:
-      #instanceId: ${spring.application.name}:${server.port}
+  instance:
+    metadataMap:
+      management.port: ${management.port:9002}
   

@@ -30,33 +30,34 @@ zuul:
   routes:
     config-general:
       path: /configg/**
-      #serviceId: configgeneral
+      serviceId: config-general
       url: http://localhost:8083
     flight-control:
       path: /flightc/**
-      #serviceId: flightcontrol
+      serviceId: flight-control
       url: http://localhost:8081
     #complete-air: /complui/**
     fare-control:
       path: /farec/**
-      #serviceId: farecontrol
+      serviceId: fare-control
       url: http://localhost:8085
     mrn:
       path: /mrn/**
-      #serviceId: farecontrol
+      serviceId: mrn
       url: http://localhost:8086
     pnr:
       path: /pnr/**
-      #serviceId: farecontrol
+      serviceId: pnr
       url: http://localhost:8087
     sales:
       path: /sale/**
-      #serviceId: farecontrol
+      serviceId: sales
       url: http://localhost:8088
     user-service:
       sensitiveHeaders:
       path: /users/**
-      #stripPrefix: false
+	  #serviceId: user-service
+      #stripPrefix: false	  
       url: http://localhost:9999/
   addProxyHeaders: true
 #
