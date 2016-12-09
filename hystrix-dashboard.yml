@@ -2,9 +2,9 @@ server:
   port: 9002
 spring:
   application:
-    name: hystrixdashboard
+    name: hystrix-dashboard
   config:
-    name: hystrixdashboard
+    name: hystrix-dashboard
 security:
   ignored: true
 turbine:
