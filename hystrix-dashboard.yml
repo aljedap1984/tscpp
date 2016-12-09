@@ -1,12 +1,12 @@
 server:
   port: 9002
-spring:
-  application:
-    name: hystrix-dashboard
-  config:
-    name: hystrix-dashboard
-security:
-  ignored: true
+#spring:
+  #application:
+    #name: hystrix-dashboard
+  #config:
+    #name: hystrix-dashboard
+#security:
+  #ignored: true
 turbine:
   aggregator:
     clusterNameExpression: 'default'
@@ -15,7 +15,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-  instance:
-    metadataMap:
-      instanceId: ${spring.application.name}:${server.port}
+  #instance:
+    #metadataMap:
+      #instanceId: ${spring.application.name}:${server.port}
   
