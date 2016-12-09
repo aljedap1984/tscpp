@@ -51,11 +51,11 @@ logging:
 # modified enable option
 server:
   port: 8083
-spring:
-  application:
-    name: config-general
-  config:
-    name: config-general
+#spring:
+  #application:
+    #name: config-general
+  #config:
+    #name: config-general
 #
 #tomcat:
   #version: 8.0.32
