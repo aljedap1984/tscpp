@@ -51,7 +51,11 @@ logging:
 # modified enable option
 server:
   port: 8083
-
+spring:
+  application:
+    name: config-general
+  config:
+    name: config-general
 #
 #tomcat:
   #version: 8.0.32
@@ -62,5 +66,5 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     metadataMap:
-      instanceId: config-general:${server.port}
+      instanceId: ${spring.application.name}:${server.port}
 

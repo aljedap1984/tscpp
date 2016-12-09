@@ -13,6 +13,11 @@ logging:
 # Define the port where the API gateway server would be running
 server:
   port: 8765
+spring:
+  application:
+    name: api-gateway
+  config:
+    name: api-gateway
 
 # Define the routes which determine what URL are serviced by what applications.
 # The application/services are defined in the bootstrap.yml file of individual applications
@@ -70,4 +75,4 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     metadataMap:
-      instanceId: api-gateway:${server.port}
+      instanceId: ${spring.application.name}:${server.port}

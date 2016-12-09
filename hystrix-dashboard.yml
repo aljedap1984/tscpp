@@ -1,10 +1,10 @@
 server:
   port: 9002
-#spring:
-  #application:
-    #name: hystrix-dashboard
-  #config:
-    #name: hystrix-dashboard
+spring:
+  application:
+    name: hystrix-dashboard
+  config:
+    name: hystrix-dashboard
 #security:
   #ignored: true
 turbine:
@@ -18,5 +18,5 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     metadataMap:
-      management.port: ${management.port:9002}
+      instanceId: ${spring.application.name}:${server.port}
   
