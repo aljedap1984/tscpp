@@ -41,11 +41,11 @@ logging:
 server:
   port: 9999
   contextPath: /uaa
-spring:
-  application:
-    name: oauth-service
-  config:
-    name: oauth-service
+#spring:
+  #application:
+    #name: oauth-service
+  #config:
+    #name: oauth-service
 # config security
 security:
   #sessions: NEVER
