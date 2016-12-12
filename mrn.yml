@@ -39,11 +39,11 @@ logging:
 # Note: import disable mode product and active mode Dev
 server:
   port: 8086
-spring:
-  application:
-    name: mrn
-  config:
-    name: mrn
+#spring:
+  #application:
+    #name: mrn
+  #config:
+    #name: mrn
 
 eureka:
   client:

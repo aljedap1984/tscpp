@@ -39,11 +39,11 @@ logging:
 # Note: import disable mode product and active mode Dev
 server:
   port: 8085
-spring:
-  application:
-    name: fare-control
-  config:
-    name: fare-control
+#spring:
+  #application:
+    #name: fare-control
+  #config:
+    #name: fare-control
 
 eureka:
   client:
