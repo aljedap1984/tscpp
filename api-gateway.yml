@@ -32,7 +32,7 @@ zuul:
   host:
     connect-timeout-millis: 5000
     socket-timeout-millis: 10000
-
+#
 hystrix:
   command:
     default:
@@ -40,8 +40,8 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 10000
-          semaphore:
-            maxConcurrentRequests: 20
+          #semaphore:
+            #maxConcurrentRequests: 20
 #
 zuul:
   #ignored-services: '*'
