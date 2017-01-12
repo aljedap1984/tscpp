@@ -26,8 +26,22 @@ server:
 # Note that we don't proxy the calls to the authorization server. The reason being that
 # Spring cloud security would need to secure the api gateway before it can route the
 # requests using zuul
-zuul.host.connect-timeout-millis: 60000
-zuul.host.socket-timeout-millis: 60000
+#zuul.host.connect-timeout-millis: 60000
+#zuul.host.socket-timeout-millis: 60000
+zuul:
+  host:
+    connect-timeout-millis: 5000
+    socket-timeout-millis: 10000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+          semaphore:
+            maxConcurrentRequests: 20
 #
 zuul:
   #ignored-services: '*'
@@ -66,8 +80,8 @@ zuul:
       url: http://localhost:9999/
   addProxyHeaders: true
 #
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
-hystrix.command.default.execution.isolation.semaphore.maxConcurrentRequests: 20
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+#hystrix.command.default.execution.isolation.semaphore.maxConcurrentRequests: 20
 # Define the Eureka server that handles service registration
 eureka:
   client:
