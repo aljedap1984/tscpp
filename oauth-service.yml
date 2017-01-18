@@ -48,19 +48,19 @@ server:
     #name: oauth-service
 # config security
 security:
-  #sessions: NEVER
+  sessions: if_required
   user: 
     password: password
 #security:
   #enable-csrf: false
   #user:
     #password: password
-  #oauth2:
-    #client:
-      #clientId: client
-      #clientSecret: secret
-      #authorized-grant-types: client_credentials,refresh_token,password
-      #scope: openid
+  oauth2:
+    client:
+      clientId: client
+      clientSecret: secret
+      authorized-grant-types: client_credentials,refresh_token,password
+      scope: openid
 #security.ignored: /resources/**
 
 # config registry eureka
