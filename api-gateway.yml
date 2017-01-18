@@ -42,17 +42,7 @@ zuul.host.socket-timeout-millis: 60000
             #timeoutInMilliseconds: 10000
           #semaphore:
             #maxConcurrentRequests: 20
-security:
-#   user:
-#     password: password
-  oauth2:
-    client:
-      accessTokenUri: http://localhost:9999/uaa/oauth/token
-      userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
-      clientId: client
-      clientSecret: secret
-    resource:
-      userInfoUri: http://localhost:9999/uaa/user
+
 #
 zuul:
   #ignored-services: '*'
