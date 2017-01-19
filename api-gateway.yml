@@ -73,10 +73,10 @@ zuul:
       path: /sale/**
       serviceId: sales
       url: http://localhost:8088
-    user-service:
+    oauth-service:
       sensitiveHeaders:
-      path: /users/**
-      serviceId: user-service
+      path: /auth/**
+      serviceId: oauth
       #stripPrefix: false	  
       url: http://localhost:9999/
   addProxyHeaders: true
