@@ -51,7 +51,7 @@ endpoints:
     sensitive: false
 #
 zuul:
-  #sensitive-headers: Cookie,Set-Cookie,Authorization
+  sensitive-headers: Cookie,Set-Cookie,Authorization
   ignored-services: '*'
   #ignoredPatterns: /**/api/**
   routes:
