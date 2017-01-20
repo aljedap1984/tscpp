@@ -81,11 +81,11 @@ zuul:
       serviceId: sales
       url: http://localhost:8088
     oauth-service:
-      sensitiveHeaders:
-      path: /auth/**
-      serviceId: oauth
+      #sensitiveHeaders:
+      path: /oauth/**
+      serviceId: oauth-service
       #stripPrefix: false	  
-      url: http://localhost:9999/
+      url: http://localhost:9999
   addProxyHeaders: true
 #
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
