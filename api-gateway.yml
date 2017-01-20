@@ -42,9 +42,16 @@ zuul.host.socket-timeout-millis: 60000
             #timeoutInMilliseconds: 10000
           #semaphore:
             #maxConcurrentRequests: 20
-
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
 #
 zuul:
+  sensitive-headers: Cookie,Set-Cookie,Authorization
   #ignored-services: '*'
   #ignoredPatterns: /**/api/**
   routes:
