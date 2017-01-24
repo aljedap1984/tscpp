@@ -18,7 +18,7 @@ server:
     #name: api-gateway
   #config:
     #name: api-gateway
-
+spring.mvc.dispatch-options-request=true
 # Define the routes which determine what URL are serviced by what applications.
 # The application/services are defined in the bootstrap.yml file of individual applications
 # using the spring.application.name property.
