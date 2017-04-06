@@ -39,8 +39,9 @@ spring:
 logging:
 
   # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
-  level: DEBUG
-
+  level:  
+  # config application
+    com.transoft.completeair.configgeneral: DEBUG
   # Logger-specific levels.
   loggers:
 
