@@ -1,5 +1,28 @@
 # config data bases
 spring:
+  # config rabbitmq
+  cloud:
+    stream:
+      bindings:
+        fareClassCreatedChannel:
+          binder: rabbit1
+          destination: fareclass.created
+          content-type: application/json
+          group: fareclasscreatedgroup
+        segmentCreatedChannel:
+          binder: rabbit1
+          destination: segment.created
+          group: segmentcreatedgroup
+      binders:
+        rabbit1:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 127.0.0.1 #192.168.0.110
+                port: 5672
+                username: admin
+                password: admin
   #profiles: test
   #jmx:
     #enabled: false
