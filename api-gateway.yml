@@ -80,6 +80,10 @@ zuul:
       path: /sales/**
       serviceId: sales
       url: http://localhost:8088
+    finance:
+      path: /finance/**
+      serviceId: finance
+      url: http://localhost:8088
     oauth-service:
       #sensitiveHeaders:
       path: /oauth/**
