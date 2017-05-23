@@ -6,8 +6,19 @@
 
 # Remaining properties are used by the OAuth2 SSO to determine where the authorization server is and
 # what client crendentials to use to access that server.
+# Logging settings.
 logging:
-  level:
+
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level:  
+  # config application
+    com.transoft.completeair.apigateway: DEBUG
+  # Logger-specific levels.
+  loggers:
+
+    # Redirects SQL logs to a separate file
+    org.hibernate.SQL: DEBUG
+    org.springframework.web: DEBUG
     org.springframework.security: DEBUG
 
 # Define the port where the API gateway server would be running
