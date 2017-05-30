@@ -39,7 +39,7 @@ logging:
 
 # Note: import disable mode product and active mode Dev
 server:
-  port: 8089
+  port: 8090
 #spring:
   #application:
     #name: kjar-service
