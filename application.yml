@@ -7,3 +7,9 @@ mail:
 #logging:
   #level:
     #org.springframework.security: DEBUG
+# Config KieServer
+kieServer:
+  user: limbert
+  password: limbert
+  url: http://localhost:8080
+  containerId: mrn
