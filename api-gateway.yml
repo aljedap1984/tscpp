@@ -37,8 +37,8 @@ server:
 # Note that we don't proxy the calls to the authorization server. The reason being that
 # Spring cloud security would need to secure the api gateway before it can route the
 # requests using zuul
-zuul.host.connect-timeout-millis: 65000
-zuul.host.socket-timeout-millis: 65000
+zuul.host.connect-timeout-millis: 80000
+zuul.host.socket-timeout-millis: 80000
 #zuul:
   #host:
     #connect-timeout-millis: 5000
