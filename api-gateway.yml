@@ -44,15 +44,15 @@ zuul.host.socket-timeout-millis: 65000
     #connect-timeout-millis: 5000
     #socket-timeout-millis: 10000
 #
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 65000
-          semaphore:
-            maxConcurrentRequests: 20
+#hystrix:
+  #command:
+    #default:
+      #execution:
+        #isolation:
+          #thread:
+            #timeoutInMilliseconds: 65000
+          #semaphore:
+            #maxConcurrentRequests: 20
 endpoints:
   restart:
     enabled: true
@@ -103,7 +103,7 @@ zuul:
       url: http://localhost:9999
   addProxyHeaders: true
 #
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 65000
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 99000
 hystrix.command.default.execution.isolation.semaphore.maxConcurrentRequests: 20
 # Define the Eureka server that handles service registration
 eureka:
