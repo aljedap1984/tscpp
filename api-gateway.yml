@@ -37,8 +37,8 @@ server:
 # Note that we don't proxy the calls to the authorization server. The reason being that
 # Spring cloud security would need to secure the api gateway before it can route the
 # requests using zuul
-zuul.host.connect-timeout-millis: 180000 #3 min
-zuul.host.socket-timeout-millis: 180000
+#zuul.host.connect-timeout-millis: 180000 #3 min
+#zuul.host.socket-timeout-millis: 180000
 #zuul:
   #host:
     #connect-timeout-millis: 5000
@@ -103,8 +103,21 @@ zuul:
       url: http://localhost:9999
   addProxyHeaders: true
 #
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 180000
-hystrix.command.default.execution.isolation.semaphore.maxConcurrentRequests: 20
+hystrix:
+  command:
+    HelloWorldCommand:
+      metrics:
+        rollingStats:
+          timeInMilliseconds: 10000
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 5000
+      circuitBreaker:
+        errorThresholdPercentage: 50
+        requestVolumeThreshold: 20
+        sleepWindowInMilliseconds: 5000
 ribbon:
   ConnectTimeout: 180000
   ReadTimeout: 180000
