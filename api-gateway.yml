@@ -105,103 +105,14 @@ zuul:
 #
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 180000
 hystrix.command.default.execution.isolation.semaphore.maxConcurrentRequests: 20
-#hystrix.command.default.execution.timeout.enabled: false
-hystrix:
-  command:
-    config-general:
-      metrics:
-        rollingStats:
-          timeInMilliseconds: 10000
-      execution:
-        isolation:
-          strategy: THREAD
-          thread:
-            timeoutInMilliseconds: 20000
-      circuitBreaker:
-        errorThresholdPercentage: 50
-        requestVolumeThreshold: 20
-        sleepWindowInMilliseconds: 5000
-    flight-control:
-      metrics:
-        rollingStats:
-          timeInMilliseconds: 10000
-      execution:
-        isolation:
-          strategy: THREAD
-          thread:
-            timeoutInMilliseconds: 20000
-      circuitBreaker:
-        errorThresholdPercentage: 50
-        requestVolumeThreshold: 20
-        sleepWindowInMilliseconds: 5000
-    fare-control:
-      metrics:
-        rollingStats:
-          timeInMilliseconds: 10000
-      execution:
-        isolation:
-          strategy: THREAD
-          thread:
-            timeoutInMilliseconds: 20000
-      circuitBreaker:
-        errorThresholdPercentage: 50
-        requestVolumeThreshold: 20
-        sleepWindowInMilliseconds: 5000
-    mrn:
-      metrics:
-        rollingStats:
-          timeInMilliseconds: 10000
-      execution:
-        isolation:
-          strategy: THREAD
-          thread:
-            timeoutInMilliseconds: 20000
-      circuitBreaker:
-        errorThresholdPercentage: 50
-        requestVolumeThreshold: 20
-        sleepWindowInMilliseconds: 5000
-    pnr:
-      metrics:
-        rollingStats:
-          timeInMilliseconds: 10000
-      execution:
-        isolation:
-          strategy: THREAD
-          thread:
-            timeoutInMilliseconds: 20000
-      circuitBreaker:
-        errorThresholdPercentage: 50
-        requestVolumeThreshold: 20
-        sleepWindowInMilliseconds: 5000
-    sales:
-      metrics:
-        rollingStats:
-          timeInMilliseconds: 10000
-      execution:
-        isolation:
-          strategy: THREAD
-          thread:
-            timeoutInMilliseconds: 20000
-      circuitBreaker:
-        errorThresholdPercentage: 50
-        requestVolumeThreshold: 20
-        sleepWindowInMilliseconds: 5000
-    finance:
-      metrics:
-        rollingStats:
-          timeInMilliseconds: 10000
-      execution:
-        isolation:
-          strategy: THREAD
-          thread:
-            timeoutInMilliseconds: 20000
-      circuitBreaker:
-        errorThresholdPercentage: 50
-        requestVolumeThreshold: 20
-        sleepWindowInMilliseconds: 5000
+hystrix.command.default.execution.timeout.enabled: false
 ribbon:
   ConnectTimeout: 180000
   ReadTimeout: 180000
+mrn:
+  ribbon:
+    ReadTimeout: 60000
+    ConnectTimeout: 60000
 # Define the Eureka server that handles service registration
 eureka:
   client:
