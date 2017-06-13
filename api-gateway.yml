@@ -103,6 +103,8 @@ zuul:
       url: http://localhost:9999
   addProxyHeaders: true
 #
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 180000
+hystrix.command.default.execution.isolation.semaphore.maxConcurrentRequests: 20
 hystrix:
   command:
     config-general:
@@ -113,7 +115,7 @@ hystrix:
         isolation:
           strategy: THREAD
           thread:
-            timeoutInMilliseconds: 5000
+            timeoutInMilliseconds: 20000
       circuitBreaker:
         errorThresholdPercentage: 50
         requestVolumeThreshold: 20
@@ -126,7 +128,7 @@ hystrix:
         isolation:
           strategy: THREAD
           thread:
-            timeoutInMilliseconds: 5000
+            timeoutInMilliseconds: 20000
       circuitBreaker:
         errorThresholdPercentage: 50
         requestVolumeThreshold: 20
@@ -139,7 +141,7 @@ hystrix:
         isolation:
           strategy: THREAD
           thread:
-            timeoutInMilliseconds: 5000
+            timeoutInMilliseconds: 20000
       circuitBreaker:
         errorThresholdPercentage: 50
         requestVolumeThreshold: 20
@@ -152,7 +154,7 @@ hystrix:
         isolation:
           strategy: THREAD
           thread:
-            timeoutInMilliseconds: 5000
+            timeoutInMilliseconds: 20000
       circuitBreaker:
         errorThresholdPercentage: 50
         requestVolumeThreshold: 20
@@ -165,7 +167,7 @@ hystrix:
         isolation:
           strategy: THREAD
           thread:
-            timeoutInMilliseconds: 5000
+            timeoutInMilliseconds: 20000
       circuitBreaker:
         errorThresholdPercentage: 50
         requestVolumeThreshold: 20
@@ -178,7 +180,7 @@ hystrix:
         isolation:
           strategy: THREAD
           thread:
-            timeoutInMilliseconds: 5000
+            timeoutInMilliseconds: 20000
       circuitBreaker:
         errorThresholdPercentage: 50
         requestVolumeThreshold: 20
@@ -191,7 +193,7 @@ hystrix:
         isolation:
           strategy: THREAD
           thread:
-            timeoutInMilliseconds: 5000
+            timeoutInMilliseconds: 20000
       circuitBreaker:
         errorThresholdPercentage: 50
         requestVolumeThreshold: 20
