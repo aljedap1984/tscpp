@@ -7,3 +7,97 @@ mail:
 #logging:
   #level:
     #org.springframework.security: DEBUG
+# Config zuul robbit
+hystrix:
+  command:
+    config-general:
+      metrics:
+        rollingStats:
+          timeInMilliseconds: 10000
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 20000
+      circuitBreaker:
+        errorThresholdPercentage: 50
+        requestVolumeThreshold: 20
+        sleepWindowInMilliseconds: 5000
+    flight-control:
+      metrics:
+        rollingStats:
+          timeInMilliseconds: 10000
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 20000
+      circuitBreaker:
+        errorThresholdPercentage: 50
+        requestVolumeThreshold: 20
+        sleepWindowInMilliseconds: 5000
+    fare-control:
+      metrics:
+        rollingStats:
+          timeInMilliseconds: 10000
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 20000
+      circuitBreaker:
+        errorThresholdPercentage: 50
+        requestVolumeThreshold: 20
+        sleepWindowInMilliseconds: 5000
+    mrn:
+      metrics:
+        rollingStats:
+          timeInMilliseconds: 10000
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 20000
+      circuitBreaker:
+        errorThresholdPercentage: 50
+        requestVolumeThreshold: 20
+        sleepWindowInMilliseconds: 5000
+    pnr:
+      metrics:
+        rollingStats:
+          timeInMilliseconds: 10000
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 20000
+      circuitBreaker:
+        errorThresholdPercentage: 50
+        requestVolumeThreshold: 20
+        sleepWindowInMilliseconds: 5000
+    sales:
+      metrics:
+        rollingStats:
+          timeInMilliseconds: 10000
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 20000
+      circuitBreaker:
+        errorThresholdPercentage: 50
+        requestVolumeThreshold: 20
+        sleepWindowInMilliseconds: 5000
+    finance:
+      metrics:
+        rollingStats:
+          timeInMilliseconds: 10000
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 20000
+      circuitBreaker:
+        errorThresholdPercentage: 50
+        requestVolumeThreshold: 20
+        sleepWindowInMilliseconds: 5000
