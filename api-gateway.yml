@@ -105,6 +105,7 @@ zuul:
 #
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 180000
 hystrix.command.default.execution.isolation.semaphore.maxConcurrentRequests: 20
+hystrix.command.default.execution.timeout.enabled: false
 hystrix:
   command:
     config-general:
