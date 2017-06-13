@@ -113,6 +113,14 @@ mrn:
   ribbon:
     ReadTimeout: 60000
     ConnectTimeout: 60000
+pnr:
+  ribbon:
+    ReadTimeout: 60000
+    ConnectTimeout: 60000
+sales:
+  ribbon:
+    ReadTimeout: 60000
+    ConnectTimeout: 60000
 # Define the Eureka server that handles service registration
 eureka:
   client:
