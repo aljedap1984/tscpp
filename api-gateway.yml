@@ -39,10 +39,10 @@ server:
 # requests using zuul
 #zuul.host.connect-timeout-millis: 180000 #3 min
 #zuul.host.socket-timeout-millis: 180000
-zuul:
-  host:
-    connect-timeout-millis: 180000
-    socket-timeout-millis: 180000
+#zuul:
+  #host:
+    #connect-timeout-millis: 180000
+    #socket-timeout-millis: 180000
 #
 #hystrix:
   #command:
@@ -62,6 +62,9 @@ endpoints:
     sensitive: false
 #
 zuul:
+  host:
+    connect-timeout-millis: 180000
+    socket-timeout-millis: 180000
   #sensitive-headers: Cookie,Set-Cookie,Authorization
   #ignored-services: '*'
   #ignoredPatterns: /**/api/**
