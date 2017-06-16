@@ -68,6 +68,12 @@ logging:
 # modified enable option
 server:
   port: 8083
+# config Oauth
+serviceOauth:
+	login: http://oauth-service/uaa/oauth/token?client_id=
+	refresh: http://oauth-service/uaa/oauth/token?grant_type=refresh_token&refresh_token=
+	logout: http://oauth-service/uaa/api/logout-up
+	account: http://oauth-service/uaa/api/account
 #spring:
   #application:
     #name: config-general
