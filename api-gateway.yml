@@ -77,7 +77,7 @@ zuul:
   routes:
     config-general:
       path: /configg/**
-      sensitive-headers: Cookie,Set-Cookie,Authorization
+      #sensitive-headers: Cookie,Set-Cookie,Authorization
       serviceId: config-general
       url: http://localhost:8083
     flight-control:
