@@ -73,7 +73,7 @@ serviceOauth:
   login: http://oauth-service/uaa/oauth/token?client_id=
   refresh: http://oauth-service/uaa/oauth/token?grant_type=refresh_token&refresh_token=
   logout: http://oauth-service/uaa/api/logout-up
-  account: http://localhost:9999/api/account
+  account: http://localhost:9999/uaa/api/account
 #spring:
   #application:
     #name: config-general
