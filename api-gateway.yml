@@ -71,7 +71,7 @@ zuul:
   host:
     connect-timeout-millis: 180000
     socket-timeout-millis: 180000
-  #sensitive-headers: Cookie,Set-Cookie,Authorization
+  sensitive-headers: Cookie,Set-Cookie,Authorization
   #ignored-services: '*'
   #ignoredPatterns: /**/api/**
   routes:
