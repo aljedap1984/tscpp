@@ -74,7 +74,7 @@ zuul:
   #sensitive-headers: Cookie,Set-Cookie,Authorization
   #ignored-services: '*'
   #ignoredPatterns: /**/api/**
-  ignoreSecurityHeaders: true
+  #ignoreSecurityHeaders: true
   routes:
     config-general:
       path: /configg/**
