@@ -36,7 +36,17 @@ logging:
     # Redirects SQL logs to a separate file
     org.hibernate.SQL: DEBUG
     org.springframework.web: DEBUG
-
+# config hystrix
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=4000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 8000
+          #semaphore:
+            #maxConcurrentRequests: 20
 # Note: import disable mode product and active mode Dev
 server:
   port: 8088
