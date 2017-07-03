@@ -61,7 +61,16 @@ logging:
     org.hibernate.SQL: DEBUG
     org.springframework.web: DEBUG
 # config hystrix
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=4000
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=4000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 65000
+          #semaphore:
+            #maxConcurrentRequests: 20
 # config Oauth
 serviceOauth:
   login: http://oauth-service/uaa/oauth/token?client_id=
