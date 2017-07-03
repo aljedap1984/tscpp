@@ -60,6 +60,8 @@ logging:
     # Redirects SQL logs to a separate file
     org.hibernate.SQL: DEBUG
     org.springframework.web: DEBUG
+# config hystrix
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=4000
 # config Oauth
 serviceOauth:
   login: http://oauth-service/uaa/oauth/token?client_id=
