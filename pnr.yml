@@ -68,7 +68,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 65000
+            timeoutInMilliseconds: 6000
           #semaphore:
             #maxConcurrentRequests: 20
 # config Oauth
