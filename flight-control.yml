@@ -21,6 +21,11 @@ spring:
           destination: segment.created
           content-type: application/json
           group: segmentcreatedgroup
+        pnrActiveFCChannel:
+          binder: rabbit1
+          destination: pnrFC.active
+          content-type: application/json
+          group: pnrFCactivegroup
       binders:
         rabbit1:
           type: rabbit
