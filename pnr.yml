@@ -14,6 +14,10 @@ spring:
           destination: pnr.canceled.reserve
           content-type: application/json
           group: pnrcanceledreservegroup
+        pnrActiveFCChannel:
+          binder: rabbit1
+          destination: pnrFC.active
+          group: pnrFCactivegroup
       binders:
         rabbit1:
           type: rabbit
