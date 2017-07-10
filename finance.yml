@@ -1,5 +1,28 @@
 # config data bases
 spring:
+  # config rabbitmq
+  cloud:
+    stream:
+      bindings:
+        pnrInvoiceSoldChannel:
+          binder: rabbit1
+          destination: pnr.invoice.sold
+          group: pnrinvoicesoldgroup
+        pnrActiveFCChannel:
+          binder: rabbit1
+          destination: pnrF.active
+          content-type: application/json
+          group: pnrFactivegroup
+      binders:
+        rabbit1:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 127.0.0.1 #192.168.0.110
+                port: 5672
+                username: admin
+                password: admin
   #profiles: test
   #jmx:
     #enabled: false
