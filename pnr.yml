@@ -22,7 +22,7 @@ spring:
           binder: rabbit1
           destination: pnrF.active
           group: pnrFactivegroup
-        pnrInvoiceSoldChannel
+        pnrInvoiceSoldChannel:
           binder: rabbit1
           destination: pnr.invoice.sold
           content-type: application/json
