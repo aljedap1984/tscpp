@@ -18,6 +18,10 @@ spring:
           binder: rabbit1
           destination: pnrFC.active
           group: pnrFCactivegroup
+        pnrActiveFinanceChannel:
+          binder: rabbit1
+          destination: pnrF.active
+          group: pnrFactivegroup
       binders:
         rabbit1:
           type: rabbit
