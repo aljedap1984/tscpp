@@ -8,7 +8,7 @@ spring:
           binder: rabbit1
           destination: pnr.invoice.sold
           group: pnrinvoicesoldgroup
-        pnrActiveFCChannel:
+        pnrActiveFChannel:
           binder: rabbit1
           destination: pnrF.active
           content-type: application/json
