@@ -8,11 +8,11 @@ spring:
           binder: rabbit1
           destination: pnr.invoice.sold
           group: pnrinvoicesoldgroup
-        pnrActiveFChannel:
+        pnrActiveFinanceChannel:
           binder: rabbit1
           destination: pnrF.active
           content-type: application/json
-          group: pnrfactivegroup
+          group: pnrFactivegroup
       binders:
         rabbit1:
           type: rabbit
