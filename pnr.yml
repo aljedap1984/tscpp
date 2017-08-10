@@ -14,6 +14,11 @@ spring:
           destination: pnr.canceled.reserve
           content-type: application/json
           group: pnrcanceledreservegroup
+        pnrCanceledFinanceChannel:
+          binder: rabbit1
+          destination: pnr.canceled.finance
+          content-type: application/json
+          group: pnrcanceledfinancegroup
         pnrActiveFCChannel:
           binder: rabbit1
           destination: pnrFC.active
