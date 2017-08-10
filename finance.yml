@@ -13,6 +13,15 @@ spring:
           destination: pnrF.active
           content-type: application/json
           group: pnrFactivegroup
+        pnrInvoiceCancelChannel:
+          binder: rabbit1
+          destination: pnr.invoice.cancel
+          group: pnrinvoicecancelgroup
+        pnrActiveFinanceCancelChannel:
+          binder: rabbit1
+          destination: pnrF.active.cancel
+          content-type: application/json
+          group: pnrFactivecancelgroup
       binders:
         rabbit1:
           type: rabbit
