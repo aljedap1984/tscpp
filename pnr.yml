@@ -36,6 +36,10 @@ spring:
           binder: rabbit1
           destination: pnrCancelFC.active
           group: pnrCancelFCactivegroup
+        pnrActiveFinanceCancelChannel:
+          binder: rabbit1
+          destination: pnrF.active.cancel
+          group: pnrFactivecancelgroup
       binders:
         rabbit1:
           type: rabbit
