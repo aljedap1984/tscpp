@@ -26,6 +26,11 @@ spring:
           destination: pnrFC.active
           content-type: application/json
           group: pnrFCactivegroup
+        pnrCanceledActiveFCChannel:
+          binder: rabbit1
+          destination: pnrCancelFC.active
+          content-type: application/json
+          group: pnrCancelFCactivegroup
       binders:
         rabbit1:
           type: rabbit
