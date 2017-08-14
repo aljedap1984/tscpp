@@ -32,10 +32,10 @@ spring:
           destination: pnr.invoice.sold
           content-type: application/json
           group: pnrinvoicesoldgroup
-        pnrActiveFinanceCancelChannel:
+        pnrCanceledActiveFCChannel:
           binder: rabbit1
-          destination: pnrF.active.cancel
-          group: pnrFactivecancelgroup
+          destination: pnrCancelFC.active
+          group: pnrCancelFCactivegroup
       binders:
         rabbit1:
           type: rabbit
