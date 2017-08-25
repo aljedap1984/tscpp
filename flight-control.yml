@@ -31,10 +31,6 @@ spring:
           destination: pnrCancelFC.active
           content-type: application/json
           group: pnrCancelFCactivegroup
-        pnrActiveFlightCChannel:
-          binder: rabbit1
-          destination: pnrActive.flightC
-          group: pnrActiveFlightCgroup
       binders:
         rabbit1:
           type: rabbit
