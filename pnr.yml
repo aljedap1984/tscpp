@@ -40,6 +40,15 @@ spring:
           binder: rabbit1
           destination: pnrF.active.cancel
           group: pnrFactivecancelgroup
+        pnrInvoiceLuggageChannel:
+          binder: rabbit1
+          destination: pnr.created.luggage
+          content-type: application/json
+          group: pnrcreatedluggagegroup
+        pnrActiveFLuggageChannel:
+          binder: rabbit1
+          destination: pnrActiveF.luggage
+          group: pnrActiveFLuggagegroup
       binders:
         rabbit1:
           type: rabbit
