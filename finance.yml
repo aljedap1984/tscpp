@@ -22,6 +22,15 @@ spring:
           destination: pnrF.active.cancel
           content-type: application/json
           group: pnrFactivecancelgroup
+        pnrActiveFLuggageChannel:
+          binder: rabbit1
+          destination: pnrActiveF.luggage
+          content-type: application/json
+          group: pnrActiveFLuggagegroup
+        pnrInvoiceLuggageChannel:
+          binder: rabbit1
+          destination: pnr.created.luggage
+          group: pnrcreatedluggagegroup
       binders:
         rabbit1:
           type: rabbit
