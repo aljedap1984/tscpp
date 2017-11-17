@@ -106,6 +106,10 @@ zuul:
       path: /finance/**
       serviceId: finance
       url: http://localhost:8089
+    cargo-control:
+      path: /cargo/**
+      serviceId: cargo
+      url: http://localhost:8090
     oauth-service:
       #sensitiveHeaders:
       path: /oauth/**
