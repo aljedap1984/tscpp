@@ -2,9 +2,8 @@
 spring:
   # config Rabbitmq
   cloud:
-    stream:	
+    stream:
       bindings:
-        # config event
         cargoInvoiceChannel:
           binder: rabbit1
           destination: cargo.created.invoice
@@ -13,7 +12,7 @@ spring:
         cargoActiveFCChannel:
           binder: rabbit1
           destination: cargoAF.active
-          group: cargoAFactivegroup
+          group: cargoAFactivegroup          
       binders:
         rabbit1:
           type: rabbit
