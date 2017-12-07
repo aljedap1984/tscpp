@@ -4,6 +4,7 @@ spring:
   cloud:
     stream:	
       bindings:
+        # config event
         cargoInvoiceChannel:
           binder: rabbit1
           destination: cargo.created.invoice
