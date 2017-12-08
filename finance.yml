@@ -31,15 +31,15 @@ spring:
           binder: rabbit1
           destination: pnr.created.luggage
           group: pnrcreatedluggagegroup
-        cargoActiveFCChannel:
-          binder: rabbit1
-          destination: cargoAF.active
-          content-type: application/json
-          group: cargoAFactivegroup
         cargoInvoiceChannel:
           binder: rabbit1
-          destination: cargo.created.invoice
-          group: cargocreatedinvoicegroup
+          destination: cargo.create.invoice
+          group: cargocreateinvoicegroup
+        cargoActiveChannel:
+          binder: rabbit1
+          destination: cargo.active
+          content-type: application/json
+          group: cargoactivegroup
       binders:
         rabbit1:
           type: rabbit

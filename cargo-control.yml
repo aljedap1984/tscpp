@@ -6,13 +6,13 @@ spring:
       bindings:
         cargoInvoiceChannel:
           binder: rabbit1
-          destination: cargo.created.invoice
+          destination: cargo.create.invoice
           content-type: application/json
-          group: cargocreatedinvoicegroup
-        cargoActiveFCChannel:
+          group: cargocreateinvoicegroup
+        cargoActiveChannel:
           binder: rabbit1
-          destination: cargoAF.active
-          group: cargoAFactivegroup          
+          destination: cargo.active
+          group: cargoactivegroup
       binders:
         rabbit1:
           type: rabbit
