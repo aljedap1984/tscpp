@@ -13,6 +13,15 @@ spring:
           binder: rabbit1
           destination: cargo.active
           group: cargoactivegroup
+        cargoConfigGeneralChannel:
+          binder: rabbit1
+          destination: cargo.config.general
+          content-type: application/json
+          group: cargoconfiggeneralgroup
+        cargoActiveCGChannel:
+          binder: rabbit1
+          destination: cargo.active.cg
+          group: cargoactivecggroup 
       binders:
         rabbit1:
           type: rabbit
