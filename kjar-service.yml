@@ -36,16 +36,22 @@ logging:
     # Redirects SQL logs to a separate file
     #org.hibernate.SQL: DEBUG
     #org.springframework.web: DEBUG
-
+# config deploy jkar kie-server
+kie:
+  #172.16.0.104 ip public
+  server: http://192.168.107.39:8080/kie-server/services/rest/server
+  user: kieserver
+  pass: kieserver,.!
+  projects:
+    fare-engine: /home/debian/fare-engine
+    other-container: /path/to/project
+  goals:
+    - clean
+    - deploy
 # Note: import disable mode product and active mode Dev
 server:
   port: 8091
-#spring:
-  #application:
-    #name: kjar-service
-  #config:
-    #name: kjar-service
-
+# config eureka
 eureka:
   client:
     serviceUrl:
