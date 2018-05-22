@@ -112,7 +112,7 @@ zuul:
       serviceId: cargo
       url: http://localhost:8090
     oauth-service:
-      #sensitiveHeaders:
+      sensitiveHeaders:
       path: /oauth/**
       serviceId: oauth-service
       #stripPrefix: false	  
