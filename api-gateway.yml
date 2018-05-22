@@ -30,6 +30,7 @@ serviceOauth:
   refresh: http://oauth-service/uaa/oauth/token?grant_type=refresh_token&refresh_token=
   logout: http://oauth-service/uaa/api/logout-up
   account: http://oauth-service/uaa/api/account
+  applicationClient: http://oauth-service/uaa/api/aplicationClient
   errorOauth: http://localhost:${server.port}
 #spring:
   #application:
