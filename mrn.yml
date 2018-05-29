@@ -48,7 +48,7 @@ server:
 # Config KieServer
 kieServer:
   user: kieserver
-  password: kieserver!
+  password: kieserver,.!
   url: http://172.16.0.104:8080/kie-server/services/rest/server
   containerId: fare-engine
 # Config Eureka
