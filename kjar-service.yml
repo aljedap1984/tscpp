@@ -60,3 +60,10 @@ eureka:
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
+
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:9999/uaa/api/user
+
+debug: true
