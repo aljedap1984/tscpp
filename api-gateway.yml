@@ -72,51 +72,38 @@ zuul:
   host:
     connect-timeout-millis: 180000
     socket-timeout-millis: 180000
-  #sensitive-headers: Cookie,Set-Cookie,Authorization
+  sensitiveHeaders:
   #ignored-services: '*'
   #ignoredPatterns: /**/api/**
   #ignoreSecurityHeaders: true
   routes:
     config-general:
       path: /configg/**
-      #sensitive-headers: Cookie,Set-Cookie,Authorization
       serviceId: config-general
-      url: http://localhost:8083
     flight-control:
       path: /flightc/**
       serviceId: flight-control
-      url: http://localhost:8081
-    #complete-air: /complui/**
     fare-control:
       path: /farec/**
       serviceId: fare-control
-      url: http://localhost:8085
     mrn:
       path: /mrn/**
       serviceId: mrn
-      url: http://localhost:8086
     pnr:
       path: /pnr/**
       serviceId: pnr
-      url: http://localhost:8087
     sales:
       path: /sales/**
       serviceId: sales
-      url: http://localhost:8088
     finance:
       path: /finance/**
       serviceId: finance
-      url: http://localhost:8089
     cargo-control:
       path: /cargo/**
       serviceId: cargo
-      url: http://localhost:8090
     oauth-service:
-      sensitiveHeaders:
       path: /oauth/**
       serviceId: oauth-service
-      #stripPrefix: false	  
-      url: http://localhost:9999
   addProxyHeaders: true
 #
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 180000
