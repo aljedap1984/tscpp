@@ -12,7 +12,9 @@ logging:
   # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
   level:  
   # config application
+    org.springframework.cloud.netflix.zuul: TRACE
     com.transoft.completeair.apigateway: DEBUG
+    org.springframework.security: DEBUG
   # Logger-specific levels.
   loggers:
 
@@ -133,3 +135,10 @@ eureka:
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:9999/uaa/api/user
