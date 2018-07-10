@@ -107,7 +107,7 @@ zuul:
       serviceId: cargo
     oauth-service:
       path: /oauth/**
-      sensitiveHeaders:
+      sensitiveHeaders: Cookie,Set-Cookie
       serviceId: oauth-service
   addProxyHeaders: true
 #
