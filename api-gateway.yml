@@ -75,18 +75,18 @@ zuul:
     connect-timeout-millis: 180000
     socket-timeout-millis: 180000
   #sensitiveHeaders:
-  ignored-services: '*'
-  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
+  #ignored-services: '*'
+  #ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
   #ignoredPatterns: /**/api/**
   #ignoreSecurityHeaders: true
   routes:
     config-general:
       path: /configg/**
-      sensitiveHeaders:
+      #sensitiveHeaders:
       serviceId: config-general
     flight-control:
       path: /flightc/**
-      sensitiveHeaders:
+      #sensitiveHeaders:
       serviceId: flight-control
     fare-control:
       path: /farec/**
@@ -108,7 +108,7 @@ zuul:
       serviceId: cargo
     oauth-service:
       path: /oauth/**
-      sensitiveHeaders: Cookie,Set-Cookie
+      #sensitiveHeaders: Cookie,Set-Cookie
       serviceId: oauth-service
   addProxyHeaders: true
 #
@@ -146,3 +146,4 @@ security:
   oauth2:
     resource:
       userInfoUri: http://localhost:9999/uaa/api/user
+      preferTokenInfo: false
