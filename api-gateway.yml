@@ -74,8 +74,8 @@ zuul:
   host:
     connect-timeout-millis: 180000
     socket-timeout-millis: 180000
-  sensitiveHeaders:
-  #ignored-services: '*'
+  #sensitiveHeaders:
+  ignored-services: '*'
   #ignoredPatterns: /**/api/**
   #ignoreSecurityHeaders: true
   routes:
