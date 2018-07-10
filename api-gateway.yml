@@ -81,9 +81,11 @@ zuul:
   routes:
     config-general:
       path: /configg/**
+      sensitiveHeaders:
       serviceId: config-general
     flight-control:
       path: /flightc/**
+      sensitiveHeaders:
       serviceId: flight-control
     fare-control:
       path: /farec/**
@@ -105,6 +107,7 @@ zuul:
       serviceId: cargo
     oauth-service:
       path: /oauth/**
+      sensitiveHeaders:
       serviceId: oauth-service
   addProxyHeaders: true
 #
