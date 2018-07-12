@@ -105,7 +105,7 @@ zuul:
       serviceId: finance
     cargo-control:
       path: /cargo/**
-      serviceId: cargo
+      serviceId: cargo-control
     oauth-service:
       path: /oauth/**
       #sensitiveHeaders: Cookie,Set-Cookie
