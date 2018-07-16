@@ -110,6 +110,10 @@ zuul:
       path: /oauth/**
       #sensitiveHeaders: Cookie,Set-Cookie
       serviceId: oauth-service
+    kjar-service:
+      path: /kjar/**
+      serviceId: kjar-service
+      #url: http://192.168.107.26:8090  
   addProxyHeaders: true
 #
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 180000
