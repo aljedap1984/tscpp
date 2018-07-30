@@ -1,6 +1,20 @@
 server:
   port: 8761
-
+# config bus
+spring:
+  cloud:
+# config rabbitmq
+    stream:
+      binders:
+        rabbit1:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 127.0.0.1 #config ip rabbitmq
+                port: 5672
+                username: admin
+                password: admin
 # Defines the Eureka server that is used by the Netflix OSS components to use as the registry
 # for server discovery
 eureka:
