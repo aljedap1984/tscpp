@@ -40,6 +40,21 @@ logging:
 # Note: import disable mode product and active mode Dev
 server:
   port: 8086
+# config bus
+spring:
+  cloud:
+# config rabbitmq
+    stream:
+      binders:
+        rabbit1:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 127.0.0.1 #config ip rabbitmq
+                port: 5672
+                username: admin
+                password: admin
 #spring:
   #application:
     #name: mrn
