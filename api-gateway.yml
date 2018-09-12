@@ -129,7 +129,7 @@ zuul:
       path: /kjar/**
       serviceId: kjar-service
       #url: http://192.168.107.26:8090
-    report:
+    report-transoft:
       path: /report/**
       serviceId: report-transoft
   addProxyHeaders: true
