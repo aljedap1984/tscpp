@@ -131,7 +131,7 @@ zuul:
       #url: http://192.168.107.26:8090
     report:
       path: /report/**
-      serviceId: report
+      serviceId: report-transoft
   addProxyHeaders: true
 #
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 180000
