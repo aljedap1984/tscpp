@@ -128,7 +128,10 @@ zuul:
     kjar-service:
       path: /kjar/**
       serviceId: kjar-service
-      #url: http://192.168.107.26:8090  
+      #url: http://192.168.107.26:8090
+    report:
+      path: /report/**
+      serviceId: report
   addProxyHeaders: true
 #
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 180000
