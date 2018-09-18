@@ -42,7 +42,7 @@ logging:
 
   # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
   level: 
-    com.transoft.completeair.sales: DEBUG
+    com.transoft.completeair.report: DEBUG
 
   # Logger-specific levels.
   loggers:
@@ -64,11 +64,6 @@ hystrix:
 # Note: import disable mode product and active mode Dev
 server:
   port: 8091
-#spring:
-  #application:
-    #name: sales
-  #config:
-    #name: sales
 
 eureka:
   client:
