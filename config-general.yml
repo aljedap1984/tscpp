@@ -68,11 +68,11 @@ spring:
 mail:
   protocol: smtp
   smtp:
-    host: smtp.gmail.com
-    port: 587
+    host: 200.87.177.122
+    port: 25
   support:
-    username: lperez.transoft@gmail.com
-    password: Transoft1!
+    username: cas@ecojet.bo
+    password: c45p455 
 # Logging settings.
 logging:
 
