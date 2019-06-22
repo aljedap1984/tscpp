@@ -135,4 +135,7 @@ security:
     resource:
       userInfoUri: http://localhost:9999/uaa/api/user
 
+flyway:
+  baselineOnMigrate: true
+  
 debug: true
