@@ -32,6 +32,11 @@ spring:
           destination: pnr.invoice.sold
           content-type: application/json
           group: pnrinvoicesoldgroup
+        pnrInvoiceWithSoldChannel:
+          binder: rabbit1
+          destination: pnr.invoicewith.sold
+          content-type: application/json
+          group: pnrinvoicewithsoldgroup
         pnrCanceledActiveFCChannel:
           binder: rabbit1
           destination: pnrCancelFC.active
