@@ -50,7 +50,7 @@ kie:
     - deploy
 # Note: import disable mode product and active mode Dev
 server:
-  port: 8091
+  port: 8092
 # config eureka
 eureka:
   client:
