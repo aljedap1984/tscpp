@@ -21,7 +21,16 @@ spring:
         cargoActiveCGChannel:
           binder: rabbit1
           destination: cargo.active.cg
-          group: cargoactivecggroup 
+          group: cargoactivecggroup
+        invoiceClsZxyChannel:
+          binder: rabbit1
+          destination: zxy.invoice.clzxy
+          content-type: application/json
+          group: zxyinvoiceclzxygroup
+        invoiceClsZxyRespCargoChannel:
+          binder: rabbit1
+          destination: zxy.invoice.resp.cargo
+          group: zxyinvoicerespcargogroup 
       binders:
         rabbit1:
           type: rabbit
