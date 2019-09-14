@@ -54,6 +54,15 @@ spring:
           binder: rabbit1
           destination: pnrActiveF.luggage
           group: pnrActiveFLuggagegroup
+        invoiceClsZxyChannel:
+          binder: rabbit1
+          destination: zxy.invoice.clzxy
+          content-type: application/json
+          group: zxyinvoiceclzxygroup
+        invoiceClsZxyRespPnrChannel:
+          binder: rabbit1
+          destination: zxy.invoice.resp.pnr
+          group: zxyinvoiceresppnrgroup
       binders:
         rabbit1:
           type: rabbit
