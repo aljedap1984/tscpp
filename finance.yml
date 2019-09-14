@@ -44,6 +44,20 @@ spring:
           destination: cargo.active
           content-type: application/json
           group: cargoactivegroup
+        invoiceClsZxyChannel:
+          binder: rabbit1
+          destination: zxy.invoice.clzxy
+          group: zxyinvoiceclzxygroup
+        invoiceClsZxyRespCargoChannel:
+          binder: rabbit1
+          destination: zxy.invoice.resp.cargo
+          content-type: application/json
+          group: zxyinvoicerespcargogroup
+        invoiceClsZxyRespPnrChannel:
+          binder: rabbit1
+          destination: zxy.invoice.resp.pnr
+          content-type: application/json
+          group: zxyinvoiceresppnrgroup
       binders:
         rabbit1:
           type: rabbit
