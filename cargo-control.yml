@@ -22,6 +22,11 @@ spring:
           binder: rabbit1
           destination: cargo.active.cg
           group: cargoactivecggroup
+        cargoInvoiceCancelChannel:
+          binder: rabbit1
+          destination: cargo.invoice.cancel
+          content-type: application/json
+          group: cargoinvoicecancelgroup
         invoiceClsZxyChannel:
           binder: rabbit1
           destination: zxy.invoice.clzxy
