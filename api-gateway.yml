@@ -43,6 +43,7 @@ spring:
                 password: admin
 # config Oauth
 serviceOauth:
+  oauth: http://oauth-service/uaa
   login: http://oauth-service/uaa/oauth/token?client_id=
   refresh: http://oauth-service/uaa/oauth/token?grant_type=refresh_token&refresh_token=
   logout: http://oauth-service/uaa/api/logout-up
@@ -172,5 +173,5 @@ security:
     enabled: false
   oauth2:
     resource:
-      userInfoUri: http://localhost:9999/uaa/api/user
+      userInfoUri: ${serviceOauth.oauth}/api/user #http://localhost:9999/uaa/api/user
       #preferTokenInfo: false
