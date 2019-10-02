@@ -161,6 +161,11 @@ eureka:
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  shareSecurityContext: true
 
 security:
   basic:
