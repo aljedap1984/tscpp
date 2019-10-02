@@ -173,5 +173,5 @@ security:
     enabled: false
   oauth2:
     resource:
-      userInfoUri: ${serviceOauth.oauth}/api/user #http://localhost:9999/uaa/api/user
+      userInfoUri: http://localhost:9999/uaa/api/user
       #preferTokenInfo: false
