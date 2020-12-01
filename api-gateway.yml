@@ -37,7 +37,7 @@ spring:
           environment:
             spring:
               rabbitmq:
-                host: 127.0.0.1 #config ip rabbitmq
+                host: 127.0.0.1 #config ip rabbitmq and for docker change the host for the ip of your machine
                 port: 5672
                 username: admin
                 password: admin
