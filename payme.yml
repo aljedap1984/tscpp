@@ -20,7 +20,7 @@ spring:
 # Datasource and JPA configuration to be used for using the same tokenstore as the authorization server for
 # the defined resource server. Note that there can't be 2 different root nodes, so datasource falls under the "spring" node.
   datasource:
-    url: jdbc:mysql://localhost:3306/report
+    url: jdbc:mysql://127.0.0.1:3306/payme
     username: root
     password: mysql
     driver-class: com.mysql.jdbc.Driver
@@ -42,7 +42,7 @@ logging:
 
   # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
   level: 
-    com.transoft.completeair.report: DEBUG
+    com.transoft.completeair.sales: DEBUG
 
   # Logger-specific levels.
   loggers:
@@ -63,13 +63,18 @@ hystrix:
             #maxConcurrentRequests: 20
 # Note: import disable mode product and active mode Dev
 server:
-  port: 8091
+  port: 8081
+#spring:
+  #application:
+    #name: sales
+  #config:
+    #name: sales
 
 eureka:
   client:
     serviceUrl:
       #defaultZone: http://actuator:password@localhost:8761/eureka/
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
@@ -77,6 +82,6 @@ eureka:
 security:
   oauth2:
     resource:
-      userInfoUri: http://localhost:9999/uaa/api/user
+      userInfoUri: http://127.0.0.1:9999/uaa/api/user
 
 debug: true

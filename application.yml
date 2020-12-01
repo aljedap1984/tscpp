@@ -1,6 +1,6 @@
 # email
 mail:
-  domain: gmail.com
+  domain: lp@gmail.com
 # info logging demo
 #info:
   #id: ${spring.application.name}

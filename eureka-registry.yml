@@ -19,7 +19,7 @@ spring:
 # for server discovery
 eureka:
   instance:
-    hostname: localhost
+    hostname: 127.0.0.1
   client:
     registerWithEureka: false
     fetchRegistry: false

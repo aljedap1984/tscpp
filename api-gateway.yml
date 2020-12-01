@@ -95,44 +95,14 @@ zuul:
   #ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
   #ignoredPatterns: /**/api/**
   #ignoreSecurityHeaders: true
-  routes:
-    config-general:
-      path: /configg/**
-      #sensitiveHeaders:
-      serviceId: config-general
-    flight-control:
-      path: /flightc/**
-      #sensitiveHeaders:
-      serviceId: flight-control
-    fare-control:
-      path: /farec/**
-      serviceId: fare-control
-    mrn:
-      path: /mrn/**
-      serviceId: mrn
-    pnr:
-      path: /pnr/**
-      serviceId: pnr
-    sales:
-      path: /sales/**
-      serviceId: sales
-    finance:
-      path: /finance/**
-      serviceId: finance
-    cargo-control:
-      path: /cargo/**
-      serviceId: cargo-control
+  routes:    
+    payme:
+      path: /payme/**
+      serviceId: payme    
     oauth-service:
       path: /oauth/**
       #sensitiveHeaders: Cookie,Set-Cookie
       serviceId: oauth-service
-    kjar-service:
-      path: /kjar/**
-      serviceId: kjar-service
-      #url: http://192.168.107.26:8090
-    report-transoft:
-      path: /report/**
-      serviceId: report-transoft
   addProxyHeaders: true
 #
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 180000
@@ -158,7 +128,7 @@ eureka:
   client:
     serviceUrl:
       #defaultZone: http://actuator:password@localhost:8761/eureka/
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
@@ -173,5 +143,5 @@ security:
     enabled: false
   oauth2:
     resource:
-      userInfoUri: http://localhost:9999/uaa/api/user
+      userInfoUri: http://127.0.0.1:9999/uaa/api/user
       #preferTokenInfo: false
