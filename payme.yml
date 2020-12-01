@@ -66,9 +66,9 @@ server:
   port: 8081
 #spring:
   #application:
-    #name: sales
+    #name: payme
   #config:
-    #name: sales
+    #name: payme
 
 eureka:
   client:
@@ -85,3 +85,14 @@ security:
       userInfoUri: http://127.0.0.1:9999/uaa/api/user
 
 debug: true
+
+web-service:
+  link-be:
+    cod-institution: '1054'
+    cod-commerce: '0375140'
+    cod-terminal: '02179999'
+    key-registry: 'TransclickEC2020'
+    service: 'ECOMME'
+    key-public: 'src/main/resources/rsa/public.rsa'
+    key-private: 'src/main/resources/rsa/private.rsa'
+    key-link: 'src/main/resources/rsa/lksts.rsa'
