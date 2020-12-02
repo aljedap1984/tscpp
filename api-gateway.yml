@@ -106,7 +106,7 @@ zuul:
       path: /oauth/**
       #sensitiveHeaders: Cookie,Set-Cookie
       serviceId: oauth-service
-	config-general:
+    config-general:
       path: /configg/**
       #sensitiveHeaders:
       serviceId: config-general
