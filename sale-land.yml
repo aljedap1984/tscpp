@@ -20,7 +20,7 @@ spring:
 # Datasource and JPA configuration to be used for using the same tokenstore as the authorization server for
 # the defined resource server. Note that there can't be 2 different root nodes, so datasource falls under the "spring" node.
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/payme
+    url: jdbc:mysql://127.0.0.1:3306/complet
     username: root
     password: mysql
     driver-class: com.mysql.jdbc.Driver
@@ -37,6 +37,9 @@ spring:
       #ddl-auto: create
       show_sql: true
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+  cache:
+    ehcache:
+      config: classpath:/etc/cache/ehcache.xml
 # Logging settings.
 logging:
 
@@ -48,8 +51,7 @@ logging:
   loggers:
 
     # Redirects SQL logs to a separate file
-    org.hibernate.SQL: DEBUG
-    org.springframework.web: DEBUG
+    org.springframework: DEBUG
 # config hystrix
 #hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=4000
 hystrix:
@@ -61,9 +63,11 @@ hystrix:
             timeoutInMilliseconds: 12000
           #semaphore:
             #maxConcurrentRequests: 20
+mybatis:
+  mapper-locations: classpath*:/etc/mybatis/*Mapper.xml
 # Note: import disable mode product and active mode Dev
 server:
-  port: 8081
+  port: 8082
 #spring:
   #application:
     #name: payme
@@ -85,14 +89,3 @@ security:
       userInfoUri: http://127.0.0.1:9999/uaa/api/user
 
 debug: true
-
-web-service:
-  link-be:
-    cod-institution: '1054'
-    cod-commerce: '0375140'
-    cod-terminal: '02179999'
-    key-registry: 'TransclickEC2020'
-    service: 'ECOMME'
-    key-public: 'src/main/resources/rsa/public.rsa'
-    key-private: 'src/main/resources/rsa/private.rsa'
-    key-link: 'src/main/resources/rsa/lksts.rsa'

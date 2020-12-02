@@ -43,7 +43,7 @@ logging:
 
   # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
   level: 
-    com.transoft.oauth: DEBUG
+    com.transclick.land.oauth: DEBUG
 
   # Logger-specific levels.
   loggers:

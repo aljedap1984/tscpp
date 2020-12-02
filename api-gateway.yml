@@ -13,7 +13,7 @@ logging:
   level:  
   # config application
     org.springframework.cloud.netflix.zuul: TRACE
-    com.transoft.completeair.apigateway: DEBUG
+    com.transclick.land.apigateway: DEBUG
     org.springframework.security: DEBUG
   # Logger-specific levels.
   loggers:
