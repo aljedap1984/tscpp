@@ -98,7 +98,10 @@ zuul:
   routes:    
     payme:
       path: /payme/**
-      serviceId: payme    
+      serviceId: payme
+    sale-land:
+      path: /sl/**
+      serviceId: sl  
     oauth-service:
       path: /oauth/**
       #sensitiveHeaders: Cookie,Set-Cookie
