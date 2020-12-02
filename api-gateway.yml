@@ -106,6 +106,10 @@ zuul:
       path: /oauth/**
       #sensitiveHeaders: Cookie,Set-Cookie
       serviceId: oauth-service
+	config-general:
+      path: /configg/**
+      #sensitiveHeaders:
+      serviceId: config-general
   addProxyHeaders: true
 #
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 180000
