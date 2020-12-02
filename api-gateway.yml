@@ -97,11 +97,11 @@ zuul:
   #ignoreSecurityHeaders: true
   routes:    
     payme:
-      path: /payme/**
+      path: /pay/**
       serviceId: payme
     sale-land:
       path: /sl/**
-      serviceId: sl  
+      serviceId: sale-land  
     oauth-service:
       path: /oauth/**
       #sensitiveHeaders: Cookie,Set-Cookie
