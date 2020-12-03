@@ -68,11 +68,11 @@ spring:
 mail:
   protocol: smtp
   smtp:
-    host: 200.87.177.122
-    port: 25
+    host: smtp.live.com
+    port: 587
   support:
-    username: cas@ecojet.bo
-    password: c45p455 
+    username: support@transoftclick.com
+    password: supp0rt2020
 # Logging settings.
 logging:
 
