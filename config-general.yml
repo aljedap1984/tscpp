@@ -66,15 +66,16 @@ spring:
 
 # Mailing
 mail:
+  host: smtp.live.com
+  port: 587
+  username: transclicksolutions@outlook.com
+  password: supp0rt2020
   protocol: smtp
-  smtp:
-    host: smtp.live.com
-    port: 587
-    start-tls-enable: true
-    start-tls-required: true
-  support:
-    username: transclicksolutions@outlook.com
-    password: supp0rt2020
+  tls: true
+  properties.mail.smtp:
+    auth: true
+    starttls.enable: true
+    ssl.trust: smtp.live.com
 # Logging settings.
 logging:
 
