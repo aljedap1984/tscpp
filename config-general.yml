@@ -68,7 +68,7 @@ spring:
 mail:
   protocol: smtp
   smtp:
-    host: smtp.live.com
+    host: smtp.office365.com
     port: 587
   support:
     username: support@transoftclick.com
