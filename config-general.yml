@@ -71,6 +71,7 @@ mail:
     host: smtp.live.com
     port: 587
     start-tls-enable: true
+    start-tls-required: true
   support:
     username: transclicksolutions@outlook.com
     password: supp0rt2020
