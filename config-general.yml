@@ -68,10 +68,10 @@ spring:
 mail:
   protocol: smtp
   smtp:
-    host: smtp.live.com
+    host: smtp.office365.com
     port: 587
   support:
-    username: transclicksolutions@outlook.com
+    username: support@transclicksolutions.com
     password: supp0rt2020
 # Logging settings.
 logging:
