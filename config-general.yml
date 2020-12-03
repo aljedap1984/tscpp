@@ -71,7 +71,7 @@ mail:
     host: smtp.office365.com
     port: 587
   support:
-    username: support@transoftclick.com
+    username: support@transclicksolutions.com
     password: supp0rt2020
 # Logging settings.
 logging:
