@@ -63,7 +63,7 @@ hystrix:
             timeoutInMilliseconds: 12000
           #semaphore:
             #maxConcurrentRequests: 20
-mybatis-plus:
+mybatis:
   mapper-locations: classpath:/etc/mybatis/*Mapper.xml
   #type-aliases-package: com.transclick.land.saleland.core
 # Note: import disable mode product and active mode Dev
