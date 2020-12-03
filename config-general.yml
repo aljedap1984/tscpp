@@ -68,7 +68,7 @@ spring:
 mail:
   protocol: smtp
   smtp:
-    host: smtp.live.com
+    host: smtp-mail.outlook.com
     port: 587
   support:
     username: transclicksolutions@outlook.com
