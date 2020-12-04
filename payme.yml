@@ -88,14 +88,3 @@ security:
       userInfoUri: http://127.0.0.1:9999/uaa/api/user
 
 debug: true
-
-web-service:
-  link-be:
-    cod-institution: '1054'
-    cod-commerce: '0375140'
-    cod-terminal: '02179999'
-    key-registry: 'TransclickEC2020'
-    service: 'ECOMME'
-    key-public: 'rsa/public.rsa'
-    key-private: 'rsa/private.rsa'
-    key-link: 'rsa/lksts.rsa'
