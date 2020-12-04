@@ -64,7 +64,7 @@ hystrix:
           #semaphore:
             #maxConcurrentRequests: 20
 mybatis:
-  mapper-locations: classpath*:/etc/mybatis/*Mapper*.xml
+  mapper-locations: classpath*:/etc/mybatis/*Mapper.xml
   type-aliases-package: com.transclick.land.saleland.core
 # Note: import disable mode product and active mode Dev
 server:
