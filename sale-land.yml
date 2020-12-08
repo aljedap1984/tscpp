@@ -45,12 +45,13 @@ logging:
 
   # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
   level: 
-    com.transclick.land.sales: DEBUG
+    com.transclick.land.saleland: DEBUG
 
   # Logger-specific levels.
   loggers:
 
     # Redirects SQL logs to a separate file
+    org.hibernate.SQL: DEBUG
     org.springframework: DEBUG
 # config hystrix
 #hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=4000
