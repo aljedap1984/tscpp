@@ -87,6 +87,8 @@ eureka:
 
 security:
   oauth2:
+    client:
+      accessTokenUri: http://localhost:9999/uaa/oauth/token
     resource:
       userInfoUri: http://127.0.0.1:9999/uaa/api/user
 
