@@ -1,0 +1,61 @@
+spring:
+# config bus
+  cloud:
+# config rabbitmq
+    stream:
+      binders:
+        rabbit1:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 127.0.0.1 #config ip rabbitmq and for docker change the host for the ip of your machine
+                port: 5672
+                username: admin
+                password: admin
+  #profiles: test
+  #jmx:
+    #enabled: false
+  cache:
+    ehcache:
+      config: classpath:/etc/cache/ehcache.xml
+# Logging settings.
+logging:
+
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: 
+    com.transclick.land.saleland: DEBUG
+
+  # Logger-specific levels.
+  loggers:
+    org.springframework: DEBUG
+# config hystrix
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=4000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 12000
+          #semaphore:
+            #maxConcurrentRequests: 20
+server:
+  port: 8082
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}
+
+security:
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:9999/uaa/oauth/token
+    resource:
+      userInfoUri: http://127.0.0.1:9999/uaa/api/user
+
+debug: true
