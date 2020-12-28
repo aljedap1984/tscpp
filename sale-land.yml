@@ -10,7 +10,7 @@ spring:
           environment:
             spring:
               rabbitmq:
-                host: 127.0.0.1 #config ip rabbitmq and for docker change the host for the ip of your machine
+                host: 192.168.3.91 #config ip rabbitmq and for docker change the host for the ip of your machine
                 port: 5672
                 username: admin
                 password: admin
@@ -20,9 +20,9 @@ spring:
 # Datasource and JPA configuration to be used for using the same tokenstore as the authorization server for
 # the defined resource server. Note that there can't be 2 different root nodes, so datasource falls under the "spring" node.
   datasource:
-    url: jdbc:mysql://localhost:3306/complet?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mysql://192.168.3.94:3306/complet?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
-    password: mysql
+    password: Transclick1!
     driver-class: com.mysql.jdbc.Driver
     initialize: true
     separator: ^
@@ -80,7 +80,7 @@ eureka:
   client:
     serviceUrl:
       #defaultZone: http://actuator:password@localhost:8761/eureka/
-      defaultZone: http://127.0.0.1:8761/eureka/
+      defaultZone: http://192.168.3.91:8761/eureka/
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
@@ -88,8 +88,8 @@ eureka:
 security:
   oauth2:
     client:
-      accessTokenUri: http://localhost:9999/uaa/oauth/token
+      accessTokenUri: http://192.168.3.91:9999/uaa/oauth/token
     resource:
-      userInfoUri: http://127.0.0.1:9999/uaa/api/user
+      userInfoUri: http://192.168.3.91:9999/uaa/api/user
 
 debug: true
