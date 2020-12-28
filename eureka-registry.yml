@@ -11,7 +11,7 @@ spring:
           environment:
             spring:
               rabbitmq:
-                host: 127.0.0.1 #config ip rabbitmq and for docker change the host for the ip of your machine
+                host: 192.168.3.91 #config ip rabbitmq and for docker change the host for the ip of your machine
                 port: 5672
                 username: admin
                 password: admin
@@ -19,7 +19,7 @@ spring:
 # for server discovery
 eureka:
   instance:
-    hostname: 127.0.0.1
+    hostname: 192.168.3.91
   client:
     registerWithEureka: false
     fetchRegistry: false
