@@ -9,7 +9,7 @@ spring:
           environment:
             spring:
               rabbitmq:
-                host: 127.0.0.1 #config ip rabbitmq and for docker change the host for the ip of your machine
+                host: 192.168.3.91 #config ip rabbitmq and for docker change the host for the ip of your machine
                 port: 5672
                 username: admin
                 password: admin
@@ -46,7 +46,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka/
+      defaultZone: http://192.168.3.91:8761/eureka/
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
@@ -54,8 +54,8 @@ eureka:
 security:
   oauth2:
     client:
-      accessTokenUri: http://localhost:9999/uaa/oauth/token
+      accessTokenUri: http://192.168.3.91:9999/uaa/oauth/token
     resource:
-      userInfoUri: http://127.0.0.1:9999/uaa/api/user
+      userInfoUri: http://192.168.3.91:9999/uaa/api/user
 
 debug: true
