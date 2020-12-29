@@ -110,11 +110,11 @@ eureka:
     serviceUrl:
       #defaultZone: http://actuator:password@localhost:8761/eureka/
       defaultZone: http://eureka-registry:8761/eureka/
-    healthcheck:
-      enabled: true
-  #instance:
-    #metadataMap:
-      #instanceId: ${spring.application.name}:${server.port}
+    #healthcheck:
+     # enabled: true
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}
 
 security:
   oauth2:
