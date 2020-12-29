@@ -95,7 +95,7 @@ serviceOauth:
   login: http://oauth-service/uaa/oauth/token?client_id=
   refresh: http://oauth-service/uaa/oauth/token?grant_type=refresh_token&refresh_token=
   logout: http://oauth-service/uaa/api/logout-up
-  account: http://oauthtest:9999/uaa/api/account
+  account: http://192.168.3.95:9999/uaa/api/account
 #spring:
   #application:
     #name: config-general
@@ -109,7 +109,7 @@ eureka:
   client:
     serviceUrl:
       #defaultZone: http://actuator:password@localhost:8761/eureka/
-      defaultZone: http://eurekatest:8761/eureka/
+      defaultZone: http://192.168.3.95:8761/eureka/
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
@@ -117,9 +117,9 @@ eureka:
 security:
   oauth2:
     client:
-      accessTokenUri: http://oauthtest:9999/uaa/oauth/token
+      accessTokenUri: http://192.168.3.95:9999/uaa/oauth/token
     resource:
-      userInfoUri: http://oauthtest:9999/uaa/api/user
+      userInfoUri: http://192.168.3.95:9999/uaa/api/user
 
 flyway:
   baselineOnMigrate: true
