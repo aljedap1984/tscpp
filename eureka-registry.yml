@@ -26,5 +26,5 @@ eureka:
     serviceUrl:
       #defaultZone: http://actuator:password@${eureka.instance.hostname}:${server.port}/eureka/
       defaultZone: http://${registry.host:localhost}:${server.port}/eureka/
-  #server:
-    #waitTimeInMsWhenSyncEmpty: 0
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
