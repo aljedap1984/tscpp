@@ -19,12 +19,12 @@ spring:
 # for server discovery
 eureka:
   instance:
-    hostname: 192.168.3.95
+    hostname: ${springboot.app.name:eureka-registry}
   client:
-    registerWithEureka: false
+    registerWithEureka: true
     fetchRegistry: false
     serviceUrl:
       #defaultZone: http://actuator:password@${eureka.instance.hostname}:${server.port}/eureka/
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${registry.host:localhost}:${server.port}/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 0
