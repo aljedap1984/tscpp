@@ -96,8 +96,8 @@ web-service:
     cod-terminal: '02179999'
     key-registry: 'TransclickEC2020'
     service: 'ECOMME'
-    key-public: 'src/main/resources/rsa/public.rsa'
-    key-private: 'src/main/resources/rsa/private.rsa'
-    key-link: 'src/main/resources/rsa/lksts.rsa'
+    key-public: 'public.rsa'
+    key-private: 'private.rsa'
+    key-link: 'lksts.rsa'
     path-ps: true
 debug: true
