@@ -83,7 +83,7 @@ eureka:
   client:
     serviceUrl:
       #defaultZone:  http://actuator:password@localhost:8761/eureka/
-      defaultZone: http://${registry.host:localhost}:${registry.port:8761}/eureka/
+      defaultZone: http://${registry.host:eureka-registry}:${registry.port:8761}/eureka/
     healthcheck:
       enabled: true
   #instance:
