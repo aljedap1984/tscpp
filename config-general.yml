@@ -121,7 +121,7 @@ security:
     client:
       accessTokenUri: http://oauth-service:9999/uaa/oauth/token
     resource:
-      userInfoUri: http://ouath-service:9999/uaa/api/user
+      userInfoUri: http://oauth-service:9999/uaa/api/user
 
 flyway:
   baselineOnMigrate: true
