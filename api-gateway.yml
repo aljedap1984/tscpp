@@ -48,7 +48,7 @@ serviceOauth:
   refresh: http://oauth-service/uaa/oauth/token?grant_type=refresh_token&refresh_token=
   logout: http://oauth-service/uaa/api/logout-up
   account: http://oauth-service/uaa/api/account
-  errorOauth: http://localhost:${server.port}
+  errorOauth: http://oauth-service:${server.port}
 #spring:
   #application:
     #name: api-gateway
@@ -135,10 +135,12 @@ eureka:
   client:
     serviceUrl:
       #defaultZone: http://actuator:password@localhost:8761/eureka/
-      defaultZone: http://192.168.3.95:8761/eureka/
-  instance:
-    metadataMap:
-      instanceId: ${spring.application.name}:${server.port}
+      defaultZone: http://${registry.host:localhost}:${registry.port:8761}/eureka/
+  healthcheck:
+      enabled: true
+  #instance:
+    #metadataMap:
+      #instanceId: ${spring.application.name}:${server.port}
 feign:
   hystrix:
     enabled: true
@@ -150,5 +152,5 @@ security:
     enabled: false
   oauth2:
     resource:
-      userInfoUri: http://192.168.3.91:9999/uaa/api/user
+      userInfoUri: http://oauth-service:9999/uaa/api/user
       #preferTokenInfo: false
