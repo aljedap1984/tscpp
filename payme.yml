@@ -87,7 +87,7 @@ eureka:
 security:
   oauth2:
     resource:
-      userInfoUri: http://192.168.3.95:9999/uaa/api/user
+      userInfoUri: http://oauth-service:9999/uaa/api/user
 # config service link be
 web-service:  
   link-be:
