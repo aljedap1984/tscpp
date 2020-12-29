@@ -136,7 +136,7 @@ eureka:
     serviceUrl:
       #defaultZone: http://actuator:password@localhost:8761/eureka/
       defaultZone: http://${registry.host:localhost}:${registry.port:8761}/eureka/
-  healthcheck:
+    healthcheck:
       enabled: true
   #instance:
     #metadataMap:
