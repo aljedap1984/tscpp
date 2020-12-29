@@ -19,7 +19,7 @@ spring:
 # for server discovery
 eureka:
   instance:
-    hostname: eurekatest
+    hostname: 192.168.3.95
   client:
     registerWithEureka: false
     fetchRegistry: false
