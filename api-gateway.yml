@@ -110,6 +110,10 @@ zuul:
       path: /configg/**
       #sensitiveHeaders:
       serviceId: config-general
+    singleton-service:
+      path: /sins/**
+      #sensitiveHeaders:
+      serviceId: singleton-service
   addProxyHeaders: true
 #
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 180000
