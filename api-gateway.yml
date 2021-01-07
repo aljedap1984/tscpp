@@ -139,7 +139,7 @@ eureka:
   client:
     serviceUrl:
       #defaultZone: http://actuator:password@localhost:8761/eureka/
-      defaultZone: https://tester.transclicksolutions.com/eureka/
+      defaultZone: https://tester.transclicksolutions.com/
     #healthcheck:
      # enabled: true
   instance:
