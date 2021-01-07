@@ -19,12 +19,12 @@ spring:
 # for server discovery
 eureka:
   instance:
-    hostname: eureka-registry
+    hostname: tester.transclicksolutions.com
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
       #defaultZone: http://actuator:password@${eureka.instance.hostname}:${server.port}/eureka/
-      defaultZone: http://${registry.host:localhost}:${server.port}/eureka/
+      defaultZone: https://${eureka.instance.hostname}/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 0
