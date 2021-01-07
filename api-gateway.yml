@@ -48,7 +48,7 @@ serviceOauth:
   refresh: http://oauth-service/uaa/oauth/token?grant_type=refresh_token&refresh_token=
   logout: http://oauth-service/uaa/api/logout-up
   account: http://oauth-service/uaa/api/account
-  errorOauth: http://oauth-service:${server.port}
+  errorOauth: https://testoa.transclicksolutions.com
 #spring:
   #application:
     #name: api-gateway
@@ -139,7 +139,7 @@ eureka:
   client:
     serviceUrl:
       #defaultZone: http://actuator:password@localhost:8761/eureka/
-      defaultZone: http://eureka-registry:8761/eureka/
+      defaultZone: https://tester.transclicksolutions.com/eureka/
     #healthcheck:
      # enabled: true
   instance:
@@ -156,5 +156,5 @@ security:
     enabled: false
   oauth2:
     resource:
-      userInfoUri: http://oauth-service:9999/uaa/api/user
+      userInfoUri: https://testoa.transclicksolutions.com/uaa/api/user
       #preferTokenInfo: false
