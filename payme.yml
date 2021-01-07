@@ -77,7 +77,7 @@ eureka:
   client:
     serviceUrl:
       #defaultZone: http://actuator:password@localhost:8761/eureka/
-      defaultZone: http://eureka-registry:8761/eureka/
+      defaultZone: https://tester.transclicksolutions.com/eureka/
     #healthcheck:
      # enabled: true
   instance:
@@ -87,7 +87,7 @@ eureka:
 security:
   oauth2:
     resource:
-      userInfoUri: http://oauth-service:9999/uaa/api/user
+      userInfoUri: https://testoa.transclicksolutions.com/uaa/api/user
 # config service link be
 web-service:  
   link-be:
