@@ -46,7 +46,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka-registry:8761/eureka/
+      defaultZone: https://tester.transclicksolutions.com/eureka/
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
@@ -54,8 +54,8 @@ eureka:
 security:
   oauth2:
     client:
-      accessTokenUri: http://oauth-service:9999/uaa/oauth/token
+      accessTokenUri: https://testoa.transclicksolutions.com/uaa/oauth/token
     resource:
-      userInfoUri: http://oauth-service:9999/uaa/api/user
+      userInfoUri: https://testoa.transclicksolutions.com/uaa/api/user
 
 debug: true
